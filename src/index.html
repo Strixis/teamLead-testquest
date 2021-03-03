@@ -14,11 +14,11 @@
       </video>
       <div class="content">
         <h1 class="main-heading">
-          <span class="main-heading_level-up">“LevelUp”.</span>
+          <span class="main-heading_level-up levelup">“LevelUp”.</span>
           <span class="main-heading_sub-text"> Продукт для повышения потенции.</span>
         </h1>
         <img class="header_product-img" src=<%= require('img/product.png') %> alt="product">
-        <a href="#order-form" class="button-order">Заказать</a>
+        <a href="#order-form" class="header_button button-order">Заказать</a>
         <ul class="characteristic-list">
           <li class="characteristic-list_item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
              mollis velit quam, id dignissim nisl gravida eu. Phasellus pellentesque suscipit.</li>
@@ -29,6 +29,75 @@
         </ul>
       </div>
     </header>
+    <section class="product">
+      <ul class="components-list components-list__left">
+        <li class="components-list_item components-list_item__left">
+          <div class="components-list_img-container">
+            <img src=<%= require('img/icon-smile-star.png') %> alt="component 1" class="component-list_img">
+          </div>
+          <div class="components-list_text-container components-list_text-container__left">
+            <p class="components-list_text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non.
+            </p>
+          </div>
+        </li>
+        <li class="components-list_item components-list_item__left">
+          <div class="components-list_img-container">
+            <img src=<%= require('img/icon-med.png') %> alt="component 2" class="component-list_img">
+          </div>
+          <div class="components-list_text-container components-list_text-container__left">
+            <p class="components-list_text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac porta ex, id mattis felis.
+            </p>
+          </div>
+        </li>
+        <li class="components-list_item components-list_item__left">
+          <div class="components-list_img-container">
+            <img src=<%= require('img/icon-candy.png') %> alt="component 3" class="component-list_img">
+          </div>
+          <div class="components-list_text-container components-list_text-container__left">
+            <p class="components-list_text">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="central">
+        <h2 class="central_heading levelup">“LevelUp”.</h2>
+        <div class="central_img-container">
+          <img class="central_img" src=<%= require('img/product.png') %> alt="product" class="central_img">
+        </div>
+        <a href="#order-form" class="central_button button-order">Заказать</a>
+      </div>
+      <ul class="components-list components-list__right">
+        <li class="components-list_item components-list_item__right">
+          <div class="components-list_img-container">
+            <img src=<%= require('img/icon-happy.png') %> alt="component 1" class="component-list_img">
+          </div>
+          <div class="components-list_text-container components-list_text-container__right">
+            <p class="components-list_text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non.
+            </p>
+          </div>
+        </li>
+        <li class="components-list_item components-list_item__right">
+          <div class="components-list_img-container">
+            <img src=<%= require('img/icon-drink.png') %> alt="component 2" class="component-list_img">
+          </div>
+          <div class="components-list_text-container components-list_text-container__right">
+            <p class="components-list_text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac porta ex, id mattis felis.
+            </p>
+          </div>
+        </li>
+        <li class="components-list_item components-list_item__right">
+          <div class="components-list_img-container">
+            <img src=<%= require('img/icon-smile-smiley.png') %> alt="component 3" class="component-list_img">
+          </div>
+          <div class="components-list_text-container components-list_text-container__right">
+            <p class="components-list_text">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
   </div>
 </body>
 </html>

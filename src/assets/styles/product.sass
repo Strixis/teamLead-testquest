@@ -1,0 +1,87 @@
+@use './m-fonts'
+
+.product
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 600px
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 242, 207, 0.161) 27.6%, rgba(249, 236, 255, 0.7) 100%)
+
+.central
+  display: flex
+  flex-direction: column
+  &_heading
+    display: flex
+    flex-direction: column
+    text-align: center
+    padding: 0
+    box-sizing: border-box
+    margin: 0 0 38px 0
+  &_img-container
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 330px
+    width: 500px
+    border-radius: 50%
+    background: #FEFFCB
+  &_button
+    margin: 44px 0 0 0
+    align-self: center
+
+.components-list
+  padding: 0
+  box-sizing: border-box
+  margin: 0
+  list-style-type: none
+  &__left
+    margin: 0 0.5% 0 0
+  &__right
+    margin: 0 0 0 0.5%
+  &_item
+    display: flex
+    align-items: center
+    margin: 0px 0px 36px 0px
+    &:last-child
+      margin-bottom: 0
+    &__left
+      &:first-child,
+      &:last-child
+        margin-left: 10%
+    &__right
+      &:first-child,
+      &:last-child
+        margin-left: -10%
+  &_img-container
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 124px
+    height: 124px
+    border: 12px solid #F4AFFF
+    box-sizing: border-box
+    border-radius: 50%
+    background: #C478FF
+  &_text-container
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+    width: 234px
+    height: 114px
+    background: rgba(244, 175, 255, 0.2)
+    border-radius: 50%
+    margin: 0
+    &__left
+      order: -1
+      margin: 0 3px 0 0
+    &__right
+      margin: 0 0 0 3px
+  &_text
+    @extend %font-item
+    width: 200px
+    padding: 0
+    box-sizing: border-box
+    text-align: center
+    margin: 0
