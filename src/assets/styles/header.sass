@@ -1,0 +1,66 @@
+@use './m-colors'
+@use './m-fonts'
+  
+.header
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 600px
+  position: relative
+  &_product-img
+    display: block
+    min-height: 240px
+    position: absolute
+    top: 93px
+    left: 120px
+
+.bg-video
+  width: 100%
+  height: 100%
+  background: rgba(250, 251, 189, 0.2)
+  position: absolute
+  z-index: 0
+  top: 0
+  left: 0
+
+.main-heading
+  display: flex
+  flex-direction: column
+  align-self: center
+  width: 460px
+  padding: 0
+  box-sizing: border-box
+  margin: 0 0 23px 0
+  z-index: 1
+  &_level-up
+    @extend %font-levelup
+  &_sub-text
+    @extend %font-levelup-sub
+    align-self: flex-end
+
+.content
+  display: flex
+  flex-direction: column
+  padding: 11px
+  box-sizing: border-box
+  align-self: center
+  width: 960px
+  border-radius: 7px
+  background: #FFFFF1
+  position: relative
+  z-index: 1
+
+.characteristic-list
+  align-self: flex-end
+  width: 600px
+  padding: 23px
+  border-radius: 37px
+  box-sizing: border-box
+  list-style-type: none
+  background: #FFF5FC
+  margin: 23px 0 0 0
+  &_item
+    @extend %font-item
+    margin: 0 0 12px 0
+    &:last-child
+      margin: 0

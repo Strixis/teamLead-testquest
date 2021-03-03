@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <video class="bg-video" muted autoplay loop>
+        <source src="#" type="#">
+      </video>
+      <div class="content">
+        <h1 class="main-heading">
+          <span class="main-heading_level-up">“LevelUp”.</span>
+          <span class="main-heading_sub-text"> Продукт для повышения потенции.</span>
+        </h1>
+        <img class="header_product-img" src=<%= require('img/product.png') %> alt="product">
+        <a href="#order-form" class="button-order">Заказать</a>
+        <ul class="characteristic-list">
+          <li class="characteristic-list_item">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+             mollis velit quam, id dignissim nisl gravida eu. Phasellus pellentesque suscipit.</li>
+          <li class="characteristic-list_item">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis 
+            lacus id mauris suscipit interdum.</li>
+          <li class="characteristic-list_item">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+             vitae mattis ligula. Etiam sodales sollicitudin nisl, sit amet cursus nisi congue in. Donec sed nisi.</li>
+        </ul>
+      </div>
+    </header>
+  </div>
+</body>
+</html>
