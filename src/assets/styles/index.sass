@@ -6,6 +6,7 @@
 @use './header'
 @use './product'
 @use './feedbacks'
+@use './promo'
 
 .container
   max-width: 1440px
@@ -32,7 +33,7 @@
   line-height: 38px
   color: m-colors.$levelup
   text-decoration: none
-  text-shadow: 2px -1px 0px m-colors.$gold
+  -webkit-text-stroke: 1px m-colors.$gold
   &:hover
     box-shadow: 4px 11px 7px rgba(255, 189, 18, 0.45)
     cursor: pointer
@@ -44,3 +45,7 @@
 
 .levelup
   @extend %font-levelup
+
+.gold-text
+  @extend %font-levelup-gold
+  -webkit-text-stroke: 1px m-colors.$gold
