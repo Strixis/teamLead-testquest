@@ -1,6 +1,7 @@
 @use './m-mixins'
 @use './m-fonts'
 @use './m-colors'
+@use './m-animations'
 
 .footer
   display: flex
@@ -74,7 +75,14 @@
     background: #C478FF
     box-shadow: 4px 4px 4px 1px rgba(244, 175, 255, 0.45)
     border-radius: 11px
-    
+
+.animated-price
+  -webkit-text-fill-color: transparent
+  background: linear-gradient(90deg, #fff 0%, #FAFF1C 40%, #fff 100%)
+  -webkit-background-clip: text
+  background-size: 1000%
+  animation: shiny-price 6s infinite normal ease-in-out
+
 .hurry-to-buy
   @include m-mixins.text-border($size: 3px, $color: #F4AFFF)
   @extend %font-hurry
