@@ -40,14 +40,17 @@
     background: linear-gradient(304.21deg, #FFF0F9 0%, #FFFFFF 100%)
     &__current
       z-index: 1
+      order: 1
     &__prev,
     &__next
       transform: scale(0.7)
       margin-top: 8%
     &__prev
       margin-right: -23%
+      order: 0
     &__next
       margin-left: -23%
+      order: 2
   &_controls
     display: flex
     justify-content: space-between
