@@ -147,6 +147,7 @@
     position: absolute
     top: 7px
     right: 15px
+    opacity: 0
   &_input
     $input-color: #F4AFFF
     @extend %font-form-main
@@ -175,3 +176,6 @@
       background: rgba(255, 255, 255, 0.7)
       border: 2px solid #C422DE
       outline: none
+  &_input:focus + &_hint
+    opacity: 1
+      
