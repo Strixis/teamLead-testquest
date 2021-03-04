@@ -42,7 +42,9 @@ class Carousel {
 
   _switchSlide(event) {
     if (event.target.classList.contains(this.controlLeftClass)) {
-      [this.curentSlideElem, this.prevSlideElem, this.nextSlideElem] = [this.prevSlideElem, this.nextSlideElem, this.curentSlideElem];
+      [this.curentSlideElem, this.prevSlideElem, this.nextSlideElem] = [
+        this.prevSlideElem, this.nextSlideElem, this.curentSlideElem
+      ];
       this.curentSlideElem.classList.toggle(this.currentSlideClass);
       this.curentSlideElem.classList.toggle(this.prevSlideClass);
       this.prevSlideElem.classList.toggle(this.prevSlideClass);
@@ -50,7 +52,9 @@ class Carousel {
       this.nextSlideElem.classList.toggle(this.nextSlideClass);
       this.nextSlideElem.classList.toggle(this.currentSlideClass);
     } else if (event.target.classList.contains(this.controlRightClass)) {
-      [this.curentSlideElem, this.prevSlideElem, this.nextSlideElem] = [this.nextSlideElem, this.curentSlideElem, this.prevSlideElem];
+      [this.curentSlideElem, this.prevSlideElem, this.nextSlideElem] = [
+        this.nextSlideElem, this.curentSlideElem, this.prevSlideElem
+      ];
       this.curentSlideElem.classList.toggle(this.currentSlideClass);
       this.curentSlideElem.classList.toggle(this.nextSlideClass);
       this.prevSlideElem.classList.toggle(this.prevSlideClass);
