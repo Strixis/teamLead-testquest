@@ -6,6 +6,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const imgOutput = 'sources/img/[name][ext]';
+const videoOutput = 'sources/video/[name][ext]';
 const fontsOutput = 'sources/fonts/[name][ext]';
 
 module.exports = (_, { mode }) => ({
@@ -26,6 +27,7 @@ module.exports = (_, { mode }) => ({
       fonts: path.resolve(__dirname, 'src', 'assets', 'fonts'),
       img: path.resolve(__dirname, 'src', 'assets', 'img'),
       scripts: path.resolve(__dirname, 'src', 'assets', 'scripts'),
+      video: path.resolve(__dirname, 'src', 'assets', 'video')
     },
   },
   module: {
@@ -81,6 +83,13 @@ module.exports = (_, { mode }) => ({
         type: 'asset/resource',
         generator: {
           filename: `${imgOutput}`,
+        },
+      },
+      {
+        test: /\.mp4$/,
+        type: 'asset/resource',
+        generator:{
+          filename: `${videoOutput}`,
         },
       },
       {
