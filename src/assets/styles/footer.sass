@@ -1,0 +1,169 @@
+@use './m-mixins'
+@use './m-fonts'
+@use './m-colors'
+
+.footer
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 1040px
+  background: rgba(255, 240, 249, 0.5)
+  background: url('~img/bg-pattern-3.jpg') repeat
+  &_content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 1160px
+    height: 960px
+    padding: 56px 72px
+    box-sizing: border-box
+    background: #FFF0F9
+    box-shadow: 3px 3px 4px 4px rgba(232, 95, 255, 0.25)
+    border-radius: 111px
+  &_heading
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    width: 500px
+    border-radius: 50px
+    background: #FFFFFF
+    margin: 0 auto 7px
+  &_content-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 36px 0 0 0
+  &_product
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-evenly
+    width: 340px
+    height: 550px
+    border: 1px solid #DB00FF
+    box-sizing: border-box
+    border-radius: 11px
+    background: rgba(255, 255, 255, 0.7)
+  &_old-price
+    @extend %font-old-price
+    padding: 16px 37px
+    box-sizing: border-box
+    background: rgba(244, 175, 255, 0.5)
+    position: relative
+    &::before,
+    &::after
+      content: ""
+      display: block
+      height: 4px
+      width: 100%
+      background: #C422DE
+      position: absolute
+      top: 50%
+      bottom: 50%
+      left: 0
+      right: 0
+    &::before
+      transform: rotate(19deg)
+    &::after
+      transform: rotate(-19deg)
+
+  &_new-price
+    @extend %font-new-price
+    padding: 21px 17px
+    box-sizing: border-box
+    background: #C478FF
+    box-shadow: 4px 4px 4px 1px rgba(244, 175, 255, 0.45)
+    border-radius: 11px
+    
+.hurry-to-buy
+  @include m-mixins.text-border($size: 3px, $color: #F4AFFF)
+  @extend %font-hurry
+  display: flex
+  width: max-content
+  padding: 0
+  margin: 0 auto 17px
+
+.timer
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 600px
+  height: 100px
+  border: 7px solid #C422DE
+  box-sizing: border-box
+  border-radius: 50px
+  background: rgba(255, 189, 18, 0.7)
+  margin: 0 auto
+  &_digit
+    @extend %font-digit
+    text-shadow: 0px 6px 6px #F4AFFF
+    &:nth-child(2n)
+      margin: 0 7px 11px
+
+.order-form
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 640px
+  height: 550px
+  border: 2px solid #E85FFF
+  box-shadow: inset 0px 4px 4px #C478FF
+  border-radius: 11px
+  padding: 17px
+  box-sizing: border-box
+  background: rgba(255, 255, 255, 0.7)
+  &_heading
+    display: flex
+    flex-direction: column
+    padding: 0
+    margin: 0 0 11px 0
+  &_label
+    display: block
+    width: 100%
+    padding: 7px 15px
+    box-sizing: border-box
+    background: rgba(255, 240, 249, 0.4)
+    box-shadow: inset 0px 4px 4px #C478FF
+    border-radius: 7px
+    margin: 0 0 24px 0
+    position: relative
+    &:last-of-type
+      margin: 0 0 126px 0
+  &_text
+    @extend %font-form-main
+    color: m-colors.$normal
+    margin: 0 0 7px 0
+  &_hint
+    @extend %font-form-main
+    color: m-colors.$levelup-sub
+    position: absolute
+    top: 7px
+    right: 15px
+  &_input
+    $input-color: #F4AFFF
+    @extend %font-form-main
+    display: block
+    width: 100%
+    padding: 14px 17px
+    border: 2px solid #C478FF
+    box-sizing: border-box
+    border-radius: 4px
+    background: transparent
+    color: $input-color
+    &::-webkit-input-placeholder
+      color: $input-color
+      opacity: 1
+    &::-moz-placeholder
+      color: $input-color
+      opacity: 1
+    &:not(:placeholder-shown)
+      color: m-colors.$levelup-sub
+    &:hover
+      background: rgba(255, 255, 255, 0.7)
+    &:focus
+      background: #FFFFFF
+      color: m-colors.$normal
+    &:active
+      background: rgba(255, 255, 255, 0.7)
+      border: 2px solid #C422DE
+      outline: none
