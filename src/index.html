@@ -239,7 +239,8 @@
             </label>
             <label class="order-form_label">
               <p class="order-form_text">Телефон:</p>
-              <input type="text" class="order-form_input" placeholder="Введите номер телефона">
+              <input type="text" class="order-form_input" id="order-form_phone" placeholder="Введите номер телефона"
+                oninput="this.value = this.value.replace(/\D/g, '')">
               <span class="order-form_hint">Например: 79057776688</span>
             </label>
             <input type="submit" class="order-form_submit button-order" value="Заказать">
