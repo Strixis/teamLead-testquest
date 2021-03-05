@@ -15,8 +15,8 @@ const carousel = new Carousel({
 const timer = new Timer({
   time: {
     hours: 0,
-    minutes: 2,
-    seconds: 10,
+    minutes: 30,
+    seconds: 0,
   },
   timerClass: 'timer',
   hoursClass: 'hours',
