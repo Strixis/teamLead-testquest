@@ -1,5 +1,6 @@
 @use './m-colors'
 @use './m-fonts'
+@use './m-media'
   
 .header
   display: flex
@@ -66,3 +67,7 @@
       margin: 0
     &::before
       content: "* "
+
+@media screen and ( max-width: m-media.$tablet )
+  .bg-video
+    height: 100%

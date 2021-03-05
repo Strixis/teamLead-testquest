@@ -1,4 +1,5 @@
 @use './m-fonts'
+@use './m-media'
 
 .promo
   height: 920px
@@ -44,3 +45,17 @@
       margin: 0 27px 0 0
     &:last-child
       margin: 0
+
+@media screen and ( max-width: m-media.$tablet )
+  .promo
+    position: relative
+    &_content-wrapper
+      width: 100%
+      padding: 20px
+      box-sizing: border-box
+      justify-content: flex-end
+    &_img
+      position: absolute
+      left: 20px
+    &_content
+      z-index: 1

@@ -2,6 +2,7 @@
 @use './m-fonts'
 @use './m-colors'
 @use './m-animations'
+@use './m-media'
 
 .footer
   display: flex
@@ -179,3 +180,9 @@
   &_input:focus + &_hint
     opacity: 1
       
+@media screen and ( max-width:m-media.$tablet  )
+  .footer
+    &_content
+      width: 97%
+  .order-form
+    width: 55%
