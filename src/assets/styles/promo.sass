@@ -1,0 +1,81 @@
+@use './m-fonts'
+@use './m-media'
+
+.promo
+  height: 920px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 242, 207, 0.23) 27.6%, #F9ECFF 100%)
+  &_content-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+  &_img
+    margin: 0 121px 0 0
+  &_heading
+    display: flex
+    flex-direction: column
+    padding: 0
+    margin: 0 0 27px 0
+  &_text-content
+    width: 581px
+    border: 11px solid #FFF9F0
+    border-radius: 11px
+    padding: 20px
+    box-sizing: border-box
+    background: #FFFFFF
+    margin: 37px 0 0 0
+  &_list
+    list-style-type: none
+    display: flex
+    margin: 67px 0 0 0
+    padding: 0
+  &_item
+    @extend %font-item-big
+    border-radius: 4px
+    padding: 6px 16px
+    box-sizing: border-box
+    text-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25)
+    background: #FFFFFF
+    margin: 0 50px 0 0
+    &::before
+      content: url('~img/icon-up.svg')
+      margin: 0 27px 0 0
+    &:last-child
+      margin: 0
+
+@media screen and ( max-width: m-media.$tablet )
+  .promo
+    position: relative
+    &_content-wrapper
+      width: 100%
+      padding: 20px
+      box-sizing: border-box
+      justify-content: flex-end
+    &_img
+      position: absolute
+      left: 20px
+    &_content
+      z-index: 1
+
+@media screen and ( max-width: m-media.$mobile )
+  .promo
+    height: auto
+    padding: 7px
+    box-sizing: border-box
+    &_content-wrapper
+      flex-direction: column
+      padding: 0
+    &_img
+      position: static
+      margin: 0
+      width: 50%
+    &_text-content
+      width: 100%
+    &_list
+      flex-direction: column
+      margin: 11px 0 0 0
+    &_item
+      margin: 0 0 17px 0
