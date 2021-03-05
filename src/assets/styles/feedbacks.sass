@@ -121,3 +121,26 @@
     &_controls
       left: 36px
       right: 36px
+
+@media screen and ( max-width: m-media.$mobile )
+  .feedbacks
+    height: auto
+  .carousel
+    &_slide
+      &__next,
+      &__prev
+        display: none
+      &__current
+        height: auto
+        width: 100%
+    &_controls
+      z-index: 1
+      bottom: 42px
+      top: auto
+      left: 8%
+      right: 8%
+    &_tape
+      height: auto
+  .user
+    align-self: center
+    width: 80%

@@ -71,3 +71,27 @@
 @media screen and ( max-width: m-media.$tablet )
   .bg-video
     height: 100%
+
+@media screen and ( max-width: m-media.$mobile )
+  .header
+    height: auto
+    &_product-img
+      display: none
+    &_button
+      margin: 0 auto
+      order: 2
+  .bg-video
+    display: none
+  .content
+    height: 100%
+    width: 100%
+    padding: 20px 0
+  .main-heading
+    width: 100%
+    align-items: center
+    &_sub-text
+      align-self: auto
+  .characteristic-list
+    width: 100%
+    border-radius: 0
+    margin: 0 0 23px 0

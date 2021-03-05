@@ -186,3 +186,40 @@
       width: 97%
   .order-form
     width: 55%
+
+@media screen and ( max-width: m-media.$mobile )
+  .footer
+    height: auto
+    padding: 3px
+    &_product
+      margin: 0 0 17px 0
+    &_content
+      padding: 3px
+      height: auto
+      border-radius: 7px
+    &_heading
+      width: 100%
+      flex-direction: column
+      border-radius: 17px
+    &_content-wrapper
+      flex-direction: column
+      margin: 11px 0 0 0
+  .gurry-to-buy
+    width: auto
+    text-align: center
+    margin: 0 auto 7px
+  .timer
+    width: 100%
+  .order-form
+    width: 100%
+    height: auto
+    &_label
+      display: flex
+      flex-direction: column
+      &:last-of-type
+        margin: 0px 0 37px
+    &_input
+      order: 1
+    &_input:focus + &_hint
+      position: static
+      margin: 0 0 7px 0

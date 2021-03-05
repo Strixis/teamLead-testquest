@@ -59,3 +59,23 @@
       left: 20px
     &_content
       z-index: 1
+
+@media screen and ( max-width: m-media.$mobile )
+  .promo
+    height: auto
+    padding: 7px
+    box-sizing: border-box
+    &_content-wrapper
+      flex-direction: column
+      padding: 0
+    &_img
+      position: static
+      margin: 0
+      width: 50%
+    &_text-content
+      width: 100%
+    &_list
+      flex-direction: column
+      margin: 11px 0 0 0
+    &_item
+      margin: 0 0 17px 0
