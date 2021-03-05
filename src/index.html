@@ -64,7 +64,7 @@
         <div class="central">
           <h2 class="central_heading levelup">“LevelUp”.</h2>
           <div class="central_img-container">
-            <img class="central_img" src=<%= require('img/product.png') %> alt="product" class="central_img">
+            <img src=<%= require('img/product.png') %> alt="product" class="central_img">
           </div>
           <a href="#order-form" class="central_button button-order">Заказать</a>
         </div>
@@ -233,12 +233,12 @@
               <span class="gold-text">Подними свой уровень.</span>
             </h3>
             <label class="order-form_label">
-              <p class="order-form_text">Имя:</p>
+              <span class="order-form_text">Имя:</span>
               <input type="text" class="order-form_input" placeholder="Введите имя">
               <span class="order-form_hint">Например: Иван</span>
             </label>
             <label class="order-form_label">
-              <p class="order-form_text">Телефон:</p>
+              <span class="order-form_text">Телефон:</span>
               <input type="text" class="order-form_input" id="order-form_phone" placeholder="Введите номер телефона"
                 oninput="this.value = this.value.replace(/\D/g, '')">
               <span class="order-form_hint">Например: 79057776688</span>
